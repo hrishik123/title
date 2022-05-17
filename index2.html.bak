@@ -1,0 +1,696 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <title>Quiz Mania</title>
+<style>
+body{
+    background-color: 	#F0FFF0;
+    overflow-x: hidden;
+}
+.bgimage{
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    left: -20px;
+}
+.div120{
+    height: 75px;
+    width: 1918px;
+    background-color: #282a30;
+    position: absolute;
+    top: -10px;
+    left: -10px; 
+}
+.menu{
+    border: 1px solid #000;
+    height: 85px;
+}
+.heading{
+    
+    background-repeat: no-repeat;
+    transform : scale(0.3);
+    color: white;
+    padding: 87px 50px;
+    font-size: 80px;
+    font-family: 'Montserrat';
+    position: relative;
+    bottom: 220px;
+    right: 340px;
+}
+.btn{
+    padding: 20px 50px;
+    display: block;
+    border: solid 1px #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 30px;
+    background: #282a30;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-family: 'Montserrat';
+    position: relative;
+    left:55px;
+    bottom: 60px;
+
+}
+.btn:hover,.btn:focus{
+    background: #ffffff;
+    color: #282a30;
+}
+.btn:active{
+    background: #282a30;
+    color: #ffffff;
+}
+.btn2{
+    padding: 20px 50px;
+    display: block;
+    border: solid 1px #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 0px;
+    background: #282a30;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-family: 'Montserrat' , sans-serif;
+    position: relative;
+    left:1550px;
+    bottom: 1088px;
+    text-decoration: none;
+    width: 130px;
+}
+.btn2:hover,.btn:focus{
+    background: #ffffff;
+    color: #282a30;
+}
+.btn2:active{
+    background: #282a30;
+    color: #ffffff;
+}
+.main{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    float:left;
+    bottom: 525px;
+    left: 600px;
+    
+}
+.main2{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    float:left;   
+    position: absolute;
+    top:5px;
+    left: 750px;
+}
+.main3{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    float:left;   
+    position: absolute;
+    top:5px;
+    left: 970px;
+}
+.main4{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    float:left;   
+    position: absolute;
+    top:5px;
+    left: 1190px;
+}
+ul{
+	list-style: none;
+}
+.anc{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:35px;
+    line-height:32px;
+    padding:15px 15px;
+    font-family: 'Montserrat';
+    
+}
+.quiz{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+}
+.quiz:hover{
+    background-color: transparent;    
+}
+.quiz:active{
+    background:#000;    
+}
+
+.quiz:hover > ul{
+    background: transparent;
+    display:block;
+    position: relative;
+    top: -55px;  
+    
+}
+.sub{
+    display:none;
+    background:transparent;
+    padding:0;
+}
+
+.sub-quiz{
+    float:none;
+    width:200px;
+}
+
+.sub-anc{
+    line-height:120%;
+    padding:10px 15px;
+    font-size:25px;
+    font-family: 'Montserrat';
+    color: #fff;
+    text-decoration: none;
+    
+}
+.sub-anc:hover{
+    color: #fff;
+    font-size: 27px;
+    position: relative;
+    left: 5px;
+    transition: all 0.3s ease;
+}
+.anc2{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:35px;
+    line-height:32px;
+    font-family: 'Montserrat';
+    position: relative;
+    top: 15px;
+    left: 60px;
+}
+.learn{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+}
+.learn:hover{
+    background-color: transparent;    
+}
+.learn:active{
+    background:#000;    
+}
+
+.learn:hover > ul{
+    background: transparent;
+    display:block;
+    position: relative;
+    top:35px;  
+    left: 45px;
+    
+    
+}
+.sub2{
+    display:none;
+    background:transparent;
+    padding:0;
+}
+.sub-quiz2{
+    float:none;
+    width:250px;
+}
+.sub-anc2{
+    line-height:120%;
+    padding:5px 15px;
+    font-size:25px;
+    color: #fff;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    
+}
+.sub-anc2:hover{
+    color: #fff;
+    font-size: 27px;
+    position: relative;
+    left: 5px;
+    transition: all 0.3s ease;
+}
+.divcombined{
+    height: 400px;
+    width: 960px;
+    background-color: #282a30;
+    position: absolute;
+    left: 460px;
+    top: 300px;
+    box-shadow: rgba(0, 0, 0, 2.96) 0px 10px 36px 0px, rgba(0, 0, 0, 2.86) 0px 0px 0px 1px;
+}
+.quick15{
+    font-size: 90px;
+    font-weight:bold;
+    font-family: sans-serif;
+    position: relative;
+    top: 60px;
+    left: 70px;
+    color: #fff;
+}
+.quickmin{
+    font-size: 18px;
+    font-weight:bold;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 110px;
+    left: 185px;
+    color: #fff;
+}
+.quickquiz{
+    font-size: 35px;
+    font-weight:bold;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 145px;
+    left: 180px;
+    color: #fff;
+}
+.sepration{
+    width: 1px;
+    height: 250px;
+    background-color: #C0C0C0;
+    position: relative;
+    left: 450px;
+    top: -340px;
+}
+.text1{
+    position: relative;
+    top: -580px;
+    left: 480px;
+    font-size: 19px;
+    color: #fff;
+}
+.text2{
+    position: relative;
+    top: -590px;
+    left: 480px;
+    font-size: 19px;
+    color: #fff;
+}
+.list{
+    position: relative;
+    top: -590px;
+    left: 455px;
+    color: #fff;
+    font-size: 17px;
+    list-style: disc;
+}
+.test{
+    width: 127px;
+    padding: 20px 50px;
+    display: block;
+    border: solid 1px #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 30px;
+    background: #282a30;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-family: 'Montserrat' , sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 10px 36px 0px, rgba(0, 0, 0, 0.16) 0px 0px 0px 1px;
+    position: relative;
+    left: 500px;
+    top: -580px;
+    text-decoration: none;
+}
+.test:hover,.test:focus{
+    background: #ffffff;
+    color: #282a30;
+}
+.test:active{
+    background: #282a30;
+    color: #ffffff;
+}
+.why{
+    font-size: 55px;
+    font-weight:bold;
+    position: relative;
+    font-family: 'Montserrat';
+    top: 300px;
+    left: 400px;
+    color: #333;
+}
+.quizmania{
+    font-size: 55px;
+    font-weight:bold;
+    font-family: 'Montserrat';
+    position: relative;
+    top: 250px;
+    left: 400px;
+    color: #333;
+}
+.reliable{
+    font-size: 40px;
+    font-family: 'Montserrat';
+    position: relative;
+    left: 1000px;
+    bottom: 150px;
+}
+.subreliable{
+    font-size: 19px;
+    font-family: 'Montserrat';
+    position: relative;
+    left: 1005px;
+    bottom: 180px;
+    margin: 5px;
+}
+.accessible{
+    font-size: 40px;
+    font-family: 'Montserrat';
+    position: relative;
+    left: 1250px;
+    bottom: 110px;
+}
+.subaccessible{
+    font-size: 19px;
+    font-family: 'Montserrat';
+    position: relative;
+    left: 1260px;
+    bottom: 140px;
+}
+.free{
+    font-size: 40px;
+    font-family: 'Montserrat';
+    position: relative;
+    left: 1000px;
+    top: -65px;
+}
+.subfree{
+    font-size: 19px;
+    font-family: 'Montserrat';
+    position: relative;
+    left: 1005px;
+    top: -95px;
+    margin: 5px;
+}
+.reliableimage{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    bottom: 860px;
+    left: 990px;
+}
+.accessibleimage{
+    height: 50px;
+    width: 60px;
+    position: relative;
+    bottom: 605px;
+    left: 1200px;
+}
+.freeimage{
+    height: 50px;
+    width: 60px;
+    position: relative;
+    bottom: 315px;
+    left: 885px;
+}
+.footer{
+    background-color: #282a30;
+    position: relative;
+    right: 10px;
+	top: 150px;
+    height: 330px;
+    width: 1920px;
+}
+.Company{
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+    position: relative;
+    top: 60px;
+    left: 390px;
+}
+.GetHelp{
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+    position: relative;
+    top: -117px;
+    left: 690px;
+    width: 100px;
+}
+.sepration1{
+    width: 50px;
+    height: 2px;
+    background-color: #e91e63;
+    position: relative;
+    left: 390px;
+    top: 110px;
+}
+.sepration2{
+    width: 50px;
+    height: 2px;
+    background-color: #e91e63;
+    position: relative;
+    left: 690px;
+    top: -67px;
+}
+.sepration3{
+    width: 50px;
+    height: 2px;
+    background-color: #e91e63;
+    position: relative;
+    left: 990px;
+    top: -272px;
+}
+.sepration4{
+    width: 50px;
+    height: 2px;
+    background-color: #e91e63;
+    position: relative;
+    left: 1275px;
+    top: -393px;
+}
+.Learnwithus{
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+    position: relative;
+    top: -325px;
+    left: 990px;
+}
+.Getintouch{
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+    position: relative;
+    top: -446px;
+    left: 1275px;
+}
+.footer1 li{
+    margin-bottom: 10px;
+    position: relative;
+    left: 350px;
+    top: 80px;
+}
+.footer1 li a{
+    font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	
+}
+.footer1 li a:hover{
+    color: #fff;
+    position: relative;
+    left: 5px;
+    transition: all 0.3s ease;
+}
+.footer2 li{
+    margin-bottom: 10px;
+    position: relative;
+    left: 650px;
+    top: -100px;
+}
+.footer2 li a{
+    font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	
+}
+.footer2 li a:hover{
+    color: #fff;
+    position: relative;
+    left: 5px;
+    transition: all 0.3s ease;
+}
+.footer3 li{
+    margin-bottom: 10px;
+    position: relative;
+    left: 950px;
+    top: -310px;
+}
+.footer3 li a{
+    font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	
+}
+.footer3 li a:hover{
+    color: #fff;
+    position: relative;
+    left: 5px;
+    transition: all 0.3s ease;
+}
+</style>
+</head>
+<body>
+    <img src="picture 2.png" class="bgimage">
+<div class="div120">
+    <div>
+    <p class="heading"><a href="index2.html"><img src="Quizmania-logo.png"></p>
+    <ul class="main">
+        <li class="quiz"><a href="#" class="anc">Quiz
+            <ul class="sub">
+                <li class="sub-quiz"><a href="#" class="sub-anc">Math</a></li>
+                <li class="sub-quiz"><a href="#" class="sub-anc">English</a></li>
+                <li class="sub-quiz"><a href="#" class="sub-anc">Chemistry</a></li>
+                <li class="sub-quiz"><a href="#" class="sub-anc">Physics</a></li>
+            </ul>
+        </a></li>
+        
+    </ul>
+    </div>
+</div>
+<div>
+    <div>
+        <ul class="main2">
+            <li class="learn"><a href="#" class="anc2">Learn
+                <ul class="sub2">
+                    <li class="sub-quiz2"><a href="video.html" class="sub-anc2">Videos</a></li>
+                    <li class="sub-quiz2"><a href="#" class="sub-anc2">Notes</a></li>
+                </ul>
+            </a></li>
+            
+        </ul>
+    </div>
+</div>
+<div>
+    <div>
+        <ul class="main3">
+            <li class="learn"><a href="#" class="anc2">Events
+                <ul class="sub2">
+                    <li class="sub-quiz2"><a href="#" class="sub-anc2"></a></li>
+                    <li class="sub-quiz2"><a href="#" class="sub-anc2"></a></li>
+                </ul>
+            </a></li>
+            
+        </ul>
+    </div>
+</div>
+<div>
+    <div>
+        <ul class="main4">
+            <li class="learn"><a href="#" class="anc2">About Us
+                <ul class="sub2">
+                    <li class="sub-quiz2"><a href="#" class="sub-anc2">About the test</a></li>
+                    <li class="sub-quiz2"><a href="#" class="sub-anc2">Ask a query</a></li>
+                    <li class="sub-quiz2"><a href="#" class="sub-anc2">FAQ</a></li>
+                </ul>
+            </a></li>
+            
+        </ul>
+    </div>
+</div>
+<a class="btn2" href="signup (2).html">Log In/Sign Up
+</a>
+  <div class="divcombined"><p class="quick15">15</p>
+    <p class="quickmin">MIN</p>
+    <p class="quickquiz">QUICK QUIZ</p>
+    <div class="sepration"></div>
+    <p class= "text1">This Quick Quiz estimates your iq level in 15 minutes,</p>
+    <p class= "text2">including math and english.</p>
+    <ul class="list"><li>Includes listening and reading both</li>
+        <li>Get certificate right after completion</li>
+        <li>Share your score on social media</li>
+    </ul>
+    <a class="test" href="rules.html">Start 15Min Test</a>
+</div>
+<p class="why">Why</p>
+<p class="quizmania">QUIZ MANIA?</p>
+<p class="reliable">It's Reliable</p>
+<p class="subreliable"><b>Created by experts.</b> These online Quizes<br> proficiency test was developed over 5<br> years with leading scientists in the field of<br> thier own assessment</p>
+<p class="accessible">It's Accessible</p>
+<p class="subaccessible"><b>A general knowledge test for everyone.</b> Quiz<br>Mania's quizes are available on any desktop,tablet, <br>or mobile device. All you need is an internet<br> connection and less than an hour of your<br> time.</p>
+<p class="free">It's Free</p>
+<p class="subfree"><b>Why pay for accurate results?</b> There<br> shouldn't be any barriers to testing your<br> General knowledge. GK tests are an important tool<br> for building your personality.</p>
+<img src="Screenshot_2022-01-10_195531-removebg-preview.png" class="reliableimage">
+<img src="Screenshot_2022-01-10_203026-removebg-preview.png" class="accessibleimage">
+<img src="Screenshot_2022-01-10_204337-removebg-preview.png" class="freeimage">
+<div class="footer">
+    <div class="sepration1"></div>
+    <p class="Company">Company
+        <ul class="footer1">
+            <li><a href="#">about us</a></li>
+  	 		<li><a href="#">our services</a></li>
+  	 		<li><a href="#">privacy policy</a></li>
+  	 		<li><a href="#">Terms of uses</a></li>
+        <ul>
+    </p>
+    <div class="sepration2"></div>
+    <p class="GetHelp">Get Help
+        <ul class="footer2">
+            <li><a href="#">Help Center</a></li>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">Forums</a></li>
+  	 				<li><a href="#">Ask a querry</a></li>
+  	 				<li><a href="#">Report a problem</a></li>
+        <ul>
+    </p>
+    <div class="sepration3"></div>
+    <p class="Learnwithus">Learn with us
+        <ul class="footer3">
+            <li><a href="#">Learn from videos</a></li>
+  	 		<li><a href="#">Get Hand written notes</a></li>
+        <ul>
+    </p>
+    <div class="sepration4"></div>
+    <p class="Getintouch">Get in touch
+
+
+    </p>
+</div>
+<script>
+
+</script>
+</body>
+</html>

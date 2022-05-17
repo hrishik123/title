@@ -1,0 +1,755 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<style>
+    body{
+        background-color: 	#eaf2f9;
+        overflow-x: hidden;
+    }
+
+
+
+
+  
+    .number{
+        height: 40px;
+        width: 1990px;
+        background-color: #fff;
+        position: fixed;
+        top: 65px;
+        left: -30px;
+        box-shadow: 0px 15px 10px -15px #111;
+    }
+    .pagination {
+        display: inline-block;
+        
+      }
+      
+      .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        position: relative;
+        top: 3px;
+        left: 820px;
+      }
+      .pagination a:hover {
+        background-color: #ddd;
+      }
+      
+      .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+      }
+      .questiontab{
+          height: 840px;
+          width: 959px;
+          position: fixed;
+          left: 0px;
+          top:105px;
+          overflow: scroll;
+          overflow-x: hidden;
+          background-color: #fff;
+      }
+      .answertab{
+        height: 840px;
+        width: 959px;
+        position: fixed;
+        left: 959px;
+        top:105px;
+        background-color: #eaf2f9;
+      }
+      .question{
+        font-size: 30px;
+        position: relative;
+        left: 100px;
+        top: 125px;
+      }
+      .testul{
+        list-style: none;
+        border: 1px solid #000;
+        width: 300px;
+        height: 310px;
+        background-color: #f1f1f1;
+        position: relative;
+        left: 250px;
+        top: 125px;
+      }
+      
+      .testul li{
+        border: 1px solid #000;
+        background-color: #fff;
+        height: 50px;
+        position: relative;
+        right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      .testul li:hover{
+        background-color: #ddd;
+      }
+      .testul li:active{
+        background-color: #ccc;
+      }
+      .testul li label,.testul li input{
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+      }
+      .timer{
+        position: fixed;
+        top: 10px;
+        left: 1500px;
+        color: #004085;
+        background: #cce5ff;
+        border: 1px solid #b8daff;
+        height: 45px;
+        padding: 0 8px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 145px;
+      }
+      #timer001{
+        font-size: 18px;
+        font-weight: 500;
+        height: 30px;
+        width: 45px;
+        color: #fff;
+        border-radius: 5px;
+        line-height: 30px;
+        text-align: center;
+        background: #343a40;
+        border: 1px solid #343a40;
+        user-select: none;
+      }
+      .time_left_txt{
+        font-weight: 400;
+        font-size: 17px;
+        user-select: none;
+      }
+      #submit{
+        position: fixed;
+        top: 70px;
+        left: 1475px;
+        background-color: #fff;
+        border: 1px solid #000;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+        width: 60px;
+        height: 30px;
+        cursor: pointer;
+      }
+      #submit:hover{
+        background-color: #339900;
+      }
+      #previous{
+        position: relative;
+        top: 62px;
+        left: 1330px;
+        background-color: #fff;
+        border: 1px solid #000;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+        width: 60px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    #previous:hover{
+        background-color: #ddd;
+    }
+      #end{
+        position: fixed;
+        top: 70px;
+        left: 1600px;
+        background-color: #FF0000;
+        border: 1px solid #000;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+        width: 85px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 30px;
+        color: #fff;
+      }
+      #mcqpage{
+        display: block;
+      }
+      #scorepage{
+        display: none;
+      }
+      .scoretab{
+
+      }
+
+
+
+
+
+      #showScore{
+            
+        width: 450px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+    position: relative;
+    top: 10px;
+    left: 25px;
+    z-index: -1;
+    
+    }
+      .scoreArea{
+        
+      }
+      @keyframes pop {
+        0%{
+            transform: scale(0.9);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+
+
+
+
+
+    .better{
+      height: 850px;
+      width: 1200px;
+      background-color: #fff;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+      position: relative;
+      left: 520px;
+      top: -570px;
+  }
+  .not{
+      position: relative;
+      left: 35px;
+      top: 15px;
+  }
+  .headtext{
+      font-size: 23px;
+      position: relative;
+      top: 10px;
+      left: 38px;
+  }
+  .monthly{
+      height: 600px;
+      width: 450px;
+      background-color:  	#282a30;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+      position: relative;
+      left: 120px;
+      top: 50px;
+      transition: all 0.4s ease;
+  }
+  .monthly:hover{
+      box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.49);
+  }
+  .months{
+      height: 600px;
+      width: 450px;
+      background-color:  	#282a30;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+      position: relative;
+      left: 700px;
+      top: -550px;
+      transition: all 0.4s ease;
+  }
+  .months:hover{
+      box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.4);
+  }
+  .logo{
+      height: 150px;
+      width: 450px;
+      background-color: #313138;
+  }
+  .logo1{
+      height: 110px;
+      width: 135px;
+      position: relative;
+      left: 150px;
+  }
+  .logo2{
+      height: 110px;
+      width: 135px;
+      position: relative;
+      left: 150px;
+  }
+  .basic{
+      color: #fff;
+      font-size: 20px;
+      font-family: 'Abril Fatface', cursive;
+      position: relative;
+      left: 135px;
+      top: -50px;
+  }
+  .ulti{
+      width: 70px;
+      height: 20px;
+      border: 2px solid #fff;
+      color: #fff;
+      border-radius: 30px;
+      padding-left: 15px;
+      padding-top: 5px;
+      position: relative;
+      left: 240px;
+      top: -365px;
+      font-size: 14px;
+  }
+  .seprate{
+      width: 450px;
+      height: 1px;
+      background-color: #C0C0C0;
+      position: relative;
+      top: 280px;
+  }
+  .subarea{
+      color: #fff;
+      font-size: 25px;
+      position: relative;
+      top: 265px;
+      left: 165px;
+  }
+  .subtxt{
+      color: #fff;
+      font-size: 19px;
+      position: relative;
+      top: 250px;
+      left: 25px;
+  }
+  .subbtn{
+      border: 1px solid #fff;
+      background-color: #006400;
+      cursor: pointer;
+      width: 280px;
+      height: 30px;
+      position: relative;
+      top: 250px;
+      left: 85px;
+  }
+  .subbtn:hover{
+      background-color:  	#228B22;
+  }
+  .join{
+      color: #fff;
+      position: relative;
+      left: 105px;
+      top: -10px;
+  }
+  .basictxt{
+      color: #fff;
+      position: relative;
+      top: -150px;
+      left: 25px;
+  }
+  .basictxt ul{
+      position: relative;
+      left: -20px;
+      list-style: disc;
+  }
+  .scoreimg{
+      width: 550px;
+      height: 450px;
+      transform: rotate(90deg);
+      position: relative;
+      left: -50px;
+  }
+  .bx{
+      height: 200px;
+      width: 350px;
+      background-color: #010211;
+      box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.4);
+      border: 2px solid #fff;
+      position: relative;
+      top: -283px;
+      left: 49px;
+      opacity: 0.98;
+  }
+  .bxborder{
+      height: 180px;
+      width: 330px;
+      border: 2px solid #fff;
+      position: relative;
+      top: 8px;
+      left: 9px;
+  }
+  h3{
+    color: #fff;
+            position: relative;
+            top: 35px;
+            left: 35px;
+            font-size: 35px;
+            font-family: 'Dongle', sans-serif; 
+            animation: pop 1s infinite alternate;
+  }
+
+
+
+
+
+
+
+
+  .div120{
+    height: 75px;
+    width: 1918px;
+    background-color: #282a30;
+    position: absolute;
+    top: -10px;
+    left: -10px; 
+}
+.menu{
+    border: 1px solid #000;
+    height: 85px;
+}
+.heading{
+    background-repeat: no-repeat;
+    transform : scale(0.3);
+    color: white;
+    padding: 87px 50px;
+    font-size: 80px;
+    font-family: 'Montserrat';
+    position: relative;
+    bottom: 220px;
+    right: 340px;
+}
+.btn{
+    padding: 20px 50px;
+    display: block;
+    border: solid 1px #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 30px;
+    background: #282a30;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-family: 'Montserrat';
+    position: relative;
+    left:55px;
+    bottom: 60px;
+
+}
+.btn:hover,.btn:focus{
+    background: #ffffff;
+    color: #282a30;
+}
+.btn:active{
+    background: #282a30;
+    color: #ffffff;
+}
+.btn2{
+    padding: 20px 50px;
+    display: block;
+    border: solid 1px #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 0px;
+    background: #282a30;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-family: 'Montserrat' , sans-serif;
+    position: relative;
+    left:1600px;
+    bottom: 1088px;
+
+}
+.btn2:hover,.btn:focus{
+    background: #ffffff;
+    color: #282a30;
+}
+.btn2:active{
+    background: #282a30;
+    color: #ffffff;
+}
+.main{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    float:left;
+    bottom: 525px;
+    left: 600px;
+    
+}
+.main2{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    float:left;   
+    position: absolute;
+    top:5px;
+    left: 750px;
+}
+.main3{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    float:left;   
+    position: absolute;
+    top:5px;
+    left: 970px;
+}
+.main4{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    float:left;   
+    position: absolute;
+    top:5px;
+    left: 1190px;
+}
+ul{
+    list-style: none;
+}
+.anc{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:35px;
+    line-height:32px;
+    padding:15px 15px;
+    font-family: 'Montserrat';
+    
+}
+.quiz{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+}
+.quiz:hover{
+    background-color: transparent;    
+}
+.quiz:active{
+    background:#000;    
+}
+
+.quiz:hover > ul{
+    background: transparent;
+    display:block;
+    position: relative;
+    top: -55px;  
+    
+}
+.sub{
+    display:none;
+    background:transparent;
+    padding:0;
+}
+
+.sub-quiz{
+    float:none;
+    width:200px;
+}
+
+.sub-anc{
+    line-height:120%;
+    padding:10px 15px;
+    font-size:25px;
+    color: #d80286;
+    text-decoration: none;
+    
+}
+.sub-anc:hover{
+    color: #fff;
+    font-size: 27px;
+    position: relative;
+    left: 5px;
+    transition: all 0.3s ease;
+}
+.anc2{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:35px;
+    line-height:32px;
+    font-family: 'Montserrat';
+    position: relative;
+    top: 15px;
+    left: 60px;
+}
+.learn{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+}
+.learn:hover{
+    background-color: transparent;    
+}
+.learn:active{
+    background:#000;    
+}
+
+.learn:hover > ul{
+    background: transparent;
+    display:block;
+    position: relative;
+    top:35px;  
+    left: 45px;
+    
+    
+}
+.sub2{
+    display:none;
+    background:transparent;
+    padding:0;
+}
+.sub-quiz2{
+    float:none;
+    width:200px;
+}
+.sub-anc2{
+    line-height:120%;
+    padding:5px 15px;
+    font-size:25px;
+    color: #d80286;
+    text-decoration: none;
+    
+}
+.sub-anc2:hover{
+    color: #fff;
+    font-size: 27px;
+    position: relative;
+    left: 5px;
+    transition: all 0.3s ease;
+}
+
+
+</style>
+</head>
+<body>
+  <div id="mcqpage" class="mcq">
+    <div class="div120">
+        <div>
+        <p class="heading"></p>
+        
+        </div>
+    </div>
+  
+    <div class="timer">
+      <div class="time_left_txt">Time Left</div>
+      <text id="timer001">10</text>
+    </div>
+    <div class="questiontab"><h2 class="question">Question comes here</h2></div>
+    <div class="answertab"><ul class="testul">
+      <li>
+        <input type="radio" name="answer" id="ans1" class="answer">
+        <label for="ans1" id="option1"> Answer Option</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="ans2" class="answer">
+        <label for="ans2" id="option2"> Answer Option</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="ans3" class="answer">
+        <label for="ans3" id="option3"> Answer Option</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="ans4" class="answer">
+        <label for="ans4" id="option4"> Answer Option</label>
+      </li>
+    </ul>
+    </div>
+    <button id = "previous" onclick="previous()">Previous</button>
+    <div class="number">
+      <button id="submit">next</button>
+      <button id="end" onclick="end()">End Test</button>
+        <div class="pagination">
+            <a onclick="one()" >1</a>
+            <a onclick="two()"> 2</a>
+            <a onclick="three()">3</a>
+            <a onclick="four()">4</a>
+          </div>
+    </div>
+  </div>
+  
+  <div id="scorepage" class="scoretab">
+
+
+
+
+    <div class="div120">
+        <div>
+        <p class="heading"><a href="index2.html"><img src="Quizmania-logo.png"></a></p>
+        <ul class="main">
+            <li class="quiz"><a href="#" class="anc">Quiz
+                <ul class="sub">
+                    <li class="sub-quiz"><a href="#" class="sub-anc">Math</a></li>
+                    <li class="sub-quiz"><a href="#" class="sub-anc">English</a></li>
+                    <li class="sub-quiz"><a href="#" class="sub-anc">Chemistry</a></li>
+                    <li class="sub-quiz"><a href="#" class="sub-anc">Physics</a></li>
+                </ul>
+            </a></li>
+            
+        </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul class="main2">
+                <li class="learn"><a href="#" class="anc2">Learn
+                    <ul class="sub2">
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">Videos</a></li>
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">Notes</a></li>
+                    </ul>
+                </a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul class="main3">
+                <li class="learn"><a href="#" class="anc2">Events
+                    <ul class="sub2">
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2"></a></li>
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2"></a></li>
+                    </ul>
+                </a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul class="main4">
+                <li class="learn"><a href="#" class="anc2">About Us
+                    <ul class="sub2">
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">About the test</a></li>
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">Ask a query</a></li>
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">FAQ</a></li>
+                    </ul>
+                </a></li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+
+  <div id="showScore" class="scoreArea" >
+      
+  </div>
+
+
+
+
+
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

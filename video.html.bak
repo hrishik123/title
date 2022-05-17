@@ -1,0 +1,583 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+        body{
+            overflow: hidden;
+            font-family: 'Josefin Sans', sans-serif;
+            background-image: url("playbg.jpg")
+        }
+        .div120{
+            height: 75px;
+            width: 1930px;
+            background-color: #282a30;
+            position: absolute;
+            top: -10px;
+            left: -10px; 
+        }
+        .heading2{
+            background-repeat: no-repeat;
+            transform : scale(0.3);
+            color: white;
+            padding: 87px 50px;
+            font-size: 80px;
+            font-family: 'Montserrat';
+            position: relative;
+            bottom: 220px;
+            right: 347px;
+        }
+        .btn{
+            padding: 20px 50px;
+            display: block;
+            border: solid 1px #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            border-radius: 30px;
+            background: #282a30;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s linear;
+            font-family: 'Montserrat';
+            position: relative;
+            left:55px;
+            bottom: 60px;
+        
+        }
+        .btn:hover,.btn:focus{
+            background: #ffffff;
+            color: #282a30;
+        }
+        .btn:active{
+            background: #282a30;
+            color: #ffffff;
+        }
+        .btn2{
+            padding: 20px 50px;
+            display: block;
+            border: solid 1px #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            border-radius: 0px;
+            background: #282a30;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s linear;
+            font-family: 'Montserrat' , sans-serif;
+            position: relative;
+            left:1600px;
+            bottom: 1088px;
+        
+        }
+        .btn2:hover,.btn:focus{
+            background: #ffffff;
+            color: #282a30;
+        }
+        .btn2:active{
+            background: #282a30;
+            color: #ffffff;
+        }
+        .main{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position:relative;
+            float:left;
+            bottom: 525px;
+            left: 600px;
+            
+        }
+        .main2{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position:relative;
+            float:left;   
+            position: absolute;
+            top:5px;
+            left: 750px;
+        }
+        .main3{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position:relative;
+            float:left;   
+            position: absolute;
+            top:5px;
+            left: 970px;
+        }
+        .main4{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position:relative;
+            float:left;   
+            position: absolute;
+            top:5px;
+            left: 1190px;
+        }
+        ul{
+            list-style: none;
+        }
+        .anc{
+            display:block;
+            color:#fff;
+            text-decoration:none;
+            font-weight:bold;
+            font-size:35px;
+            line-height:32px;
+            padding:15px 15px;
+            font-family: 'Montserrat';
+            
+        }
+        .quiz{
+            position:relative;
+            float:left;
+            margin:0;
+            padding:0;
+        }
+        .quiz:hover{
+            background-color: transparent;    
+        }
+        .quiz:active{
+            background:#000;    
+        }
+        
+        .quiz:hover > ul{
+            background: transparent;
+            display:block;
+            position: relative;
+            top: -55px;  
+            
+        }
+        .sub{
+            display:none;
+            background:transparent;
+            padding:0;
+        }
+        
+        .sub-quiz{
+            float:none;
+            width:200px;
+        }
+        
+        .sub-anc{
+            line-height:120%;
+            padding:10px 15px;
+            font-size:25px;
+            color: #d80286;
+            text-decoration: none;
+            
+        }
+        .sub-anc:hover{
+            color: #fff;
+            font-size: 27px;
+            position: relative;
+            left: 5px;
+            transition: all 0.3s ease;
+        }
+        .anc2{
+            display:block;
+            color:#fff;
+            text-decoration:none;
+            font-weight:bold;
+            font-size:35px;
+            line-height:32px;
+            font-family: 'Montserrat';
+            position: relative;
+            top: 15px;
+            left: 60px;
+        }
+        .learn{
+            position:relative;
+            float:left;
+            margin:0;
+            padding:0;
+        }
+        .learn:hover{
+            background-color: transparent;    
+        }
+        .learn:active{
+            background:#000;    
+        }
+        
+        .learn:hover > ul{
+            background: transparent;
+            display:block;
+            position: relative;
+            top:35px;  
+            left: 45px;
+            
+            
+        }
+        .sub2{
+            display:none;
+            background:transparent;
+            padding:0;
+        }
+        .sub-quiz2{
+            float:none;
+            width:200px;
+        }
+        .sub-anc2{
+            line-height:120%;
+            padding:5px 15px;
+            font-size:25px;
+            color: #d80286;
+            text-decoration: none;
+            
+        }
+        .sub-anc2:hover{
+            color: #fff;
+            font-size: 27px;
+            position: relative;
+            left: 5px;
+            transition: all 0.3s ease;
+        }
+
+        h1{
+            color: #fff;
+            font-size: 75px;
+            position: relative;
+            left: 725px;
+            top: 10px;
+        }
+        h1 span{
+            display: inline-block;
+        }
+        h1 span:first-child{
+            animation: pop 1s infinite alternate;
+            color: #d80286;
+        }
+        h1 :nth-child(2){
+            animation: rotate 1s infinite alternate;
+            color: #d80286;
+        }
+        h1 span:last-child{
+            animation: popRotate 1s 0.2s infinite alternate;
+            color: #d80286;
+        }
+        @keyframes pop {
+            0%{
+                transform: scale(0.9);
+            }
+            100%{
+                transform: scale(1) rotateZ(1deg);
+            }
+        }
+        @keyframes popRotate{
+            0%{
+                transform: scale(0.9);
+            }
+            100%{
+                transform: scale(1) rotateZ(-3deg);
+            }
+        }
+        @keyframes rotate{
+            0%{
+                transform: scale(0.9);
+            }
+            100%{
+                transform: scale(1) rotateY(-90deg));
+            }
+        }
+        .math{
+            height: 300px;
+            width: 450px;
+            background-color: #26262e;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            transition: box-shadow 500ms;
+            position: relative;
+            left: 150px;
+            top: -65px;
+        }
+        .math:hover{
+            box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+        }
+        .mathimg{
+            height: 230px;
+            width: 450px;
+        }
+        .speciality .box-container{
+            display: flex;
+            flex-wrap: wrap;
+          }
+          
+          .speciality .box-container .box{
+            flex:1 1 30rem;
+            position: relative;
+            overflow: hidden;
+          }
+          .speciality .box-container .box .image{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top:-100%; left:0;
+          }
+          .speciality .box-container .box:hover .image{
+            top:0;
+            height: 230px;
+            width: 450px;
+          }
+
+          .eng{
+            height: 200px;
+            width: 450px;
+          }
+          .button_slide {
+            color: #FFF;
+            border: 2px solid rgb(216, 2, 134);
+            padding: 18px 36px;
+            display: inline-block;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 0 #D80286;
+            -webkit-transition: ease-out 0.4s;
+            -moz-transition: ease-out 0.4s;
+            transition: ease-out 0.4s;
+            border-radius: 30px;
+            position: relative;
+            top: 9px;
+            left: 140px;
+            text-decoration: none;
+            
+          }
+          .slide_right:hover {
+            box-shadow: inset 400px 0 0 0 #D80286;
+          }
+          .chem{
+            height: 300px;
+            width: 450px;
+            background-color: #26262e;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            transition: box-shadow 500ms;
+            position: relative;
+            left: 150px;
+            top: 75px;
+          }
+          .chem:hover{
+            box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+          }
+          .phys{
+            height: 300px;
+            width: 450px;
+            background-color: #26262e;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            transition: box-shadow 500ms;
+            position: relative;
+            left: 1300px;
+            top: -225px;
+          }
+          .phys:hover{
+            box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+          }
+          .english{
+            height: 300px;
+            width: 450px;
+            background-color: #26262e;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            transition: box-shadow 500ms;
+            position: relative;
+            left: 1300px;
+            top: -965px;
+          }
+          .english:hover{
+            box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+          }
+          .line{
+              height: 2px;
+              width: 142px;
+              background-color: #d80286;
+              position: relative;
+              top: -19px;
+              left: -2px;
+          }
+          .line2{
+            height: 2px;
+            width: 139px;
+            background-color: #d80286;
+            position: relative;
+            top: -21px;
+            left: 308px;
+        }
+        .learn1{
+            position: relative;
+            top: 320px;
+            left: 100px;
+        }
+        .with{
+            position: relative;
+            top: 380px;
+        }
+        .us{
+            position: relative;
+            top: 430px;
+            left: -230px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div120">
+        <div>
+        <p class="heading2"><a href="index2.html"><img src="Quizmania-logo.png"></p>
+        <ul class="main">
+            <li class="quiz"><a href="#" class="anc">Quiz
+                <ul class="sub">
+                    <li class="sub-quiz"><a href="#" class="sub-anc">Math</a></li>
+                    <li class="sub-quiz"><a href="#" class="sub-anc">English</a></li>
+                    <li class="sub-quiz"><a href="#" class="sub-anc">Chemistry</a></li>
+                    <li class="sub-quiz"><a href="#" class="sub-anc">Physics</a></li>
+                </ul>
+            </a></li>
+            
+        </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul class="main2">
+                <li class="learn"><a href="#" class="anc2">Learn
+                    <ul class="sub2">
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">Videos</a></li>
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">Notes</a></li>
+                    </ul>
+                </a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul class="main3">
+                <li class="learn"><a href="#" class="anc2">Events
+                    <ul class="sub2">
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2"></a></li>
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2"></a></li>
+                    </ul>
+                </a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul class="main4">
+                <li class="learn"><a href="#" class="anc2">About Us
+                    <ul class="sub2">
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">About the test</a></li>
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">Ask a query</a></li>
+                        <li class="sub-quiz2"><a href="#" class="sub-anc2">FAQ</a></li>
+                    </ul>
+                </a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <h1><span class="learn1">Learn</span><span class="with"> With</span><span class="us"> Us!</span></h1>
+                <div class="math"><table>
+                    <td><tr>
+                        
+                            <section class="speciality" id="speciality">
+                            <div class="box-container">
+                                <div class="box">
+                                    <img class="image" src="gif.gif">
+                                    <div class="content">
+                                        <img src="maths.jpg" class="eng">
+                                    </div>
+                                </div>
+                            </div>
+                            </section>
+                        
+                    </tr></td>
+                    <tr>
+                        <td>
+                            <a class="button_slide slide_right" href="play.html">Watch Here</a>
+                            <div class="line"></div>
+                            <div class="line2"></div>
+                        </td>
+                    </tr>
+                    
+                </table></div>
+                <div class="chem"><table>
+                    <td><tr>
+                        
+                            <section class="speciality" id="speciality">
+                            <div class="box-container">
+                                <div class="box">
+                                    <img class="image" src="gif.gif">
+                                    <div class="content">
+                                        <img src="chemistry.jpg" class="eng">
+                                    </div>
+                                </div>
+                            </div>
+                            </section>
+                        
+                    </tr></td>
+                    <tr>
+                        <td>
+                            <div class="button_slide slide_right">Watch Here</div>
+                            <div class="line"></div>
+                            <div class="line2"></div>
+                        </td>
+                    </tr>
+                    
+                </table></div>
+                <div class="phys"><table>
+                    <td><tr>
+                        
+                            <section class="speciality" id="speciality">
+                            <div class="box-container">
+                                <div class="box">
+                                    <img class="image" src="gif.gif">
+                                    <div class="content">
+                                        <img src="physics.jpg" class="eng">
+                                    </div>
+                                </div>
+                            </div>
+                            </section>
+                        
+                    </tr></td>
+                    <tr>
+                        <td>
+                            <div class="button_slide slide_right">Watch Here</div>
+                            <div class="line"></div>
+                            <div class="line2"></div>
+                        </td>
+                    </tr>
+                    
+                </table></div>
+                <div class="english"><table>
+                    <td><tr>
+                        
+                            <section class="speciality" id="speciality">
+                            <div class="box-container">
+                                <div class="box">
+                                    <img class="image" src="gif.gif">
+                                    <div class="content">
+                                        <img src="english.jpg" class="eng">
+                                    </div>
+                                </div>
+                            </div>
+                            </section>
+                        
+                    </tr></td>
+                    <tr>
+                        <td>
+                            <div class="button_slide slide_right">Watch Here</div>
+                            <div class="line"></div>
+                            <div class="line2"></div>
+                        </td>
+                    </tr>
+                    
+                </table></div>
+                
+
+
+</body>
+</html>
